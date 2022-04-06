@@ -1,0 +1,20 @@
+﻿
+<h1>Tela de Login</h1>
+<style>
+    p{
+        color:red;
+        font-size:15px;
+        font-family:Arial;
+
+    }
+</style>
+<form method="post" action="/Login/Entrar">
+    <input type="text" name="usuario" placeholder="Usuário" /><br />
+    <input type="password" name="senha" placeholder="Senha" /><br />
+    @if (TempData["erro"] != null)
+    {
+        <p>@TempData["erro"]</p>
+    }
+    <button type="submit">Entrar</button>
+
+</form>
